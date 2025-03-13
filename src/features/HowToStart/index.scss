@@ -7,10 +7,26 @@
   padding-bottom: 0;
   background-color: v.$color-purple;
   color: v.$text-color-white;
+  border-radius: 0 4px 0 0;
+  clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 57.06% 0%, 65.05% 3.78%, 100% 3.78%, 100% 100%);
 
   @include breakpoint.for-large-up {
+    height: 680px;
     padding: 56px 80px;
     padding-bottom: 0;
+    border-radius: 0;
+    clip-path: polygon(
+      100.28% 100.88%,
+      0% 100.88%,
+      0% 95.83%,
+      0% 20.18%,
+      0% 10.8%,
+      0% 0%,
+      42.2% 0%,
+      46.31% 8.13%,
+      100% 8.04%,
+      100.28% 100.88%
+    );
   }
 
   &__title {
@@ -21,6 +37,7 @@
     line-height: 36px;
 
     @include breakpoint.for-large-up {
+      margin-top: 56px;
       font-size: 44px;
       line-height: 56px;
       width: 100%;

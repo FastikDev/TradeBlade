@@ -16,6 +16,7 @@ const About = () => {
           TradeBlade всего в 1 клик.
         </p>
       </div>
+
       <Trial
         className="about-trial"
         title={`Попробуйте сейчас и получите

@@ -3,8 +3,6 @@ import Navigation from './Navigation';
 import Auth from './Auth';
 import { tabs } from '../../config/tabs';
 
-import '../../../styles/menu.scss';
-
 const Menu = ({ onClose }) => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 

@@ -11,6 +11,7 @@ import Comments from './features/Comments';
 import FAQ from './features/FAQ';
 import Trial from './features/common/Trial';
 import Footer from './features/Footer';
+import Poligon from './features/common/Poligon';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +29,7 @@ const App = () => {
       <TopSection onOpen={onOpen} />
       <Numbers />
       <Online />
+      <Poligon />
       <About />
       <TradeBladeIs />
       <HowToStart />

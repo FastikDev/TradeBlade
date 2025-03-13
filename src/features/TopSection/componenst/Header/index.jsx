@@ -4,7 +4,7 @@ import Auth from './components/Auth';
 import { tabs } from '../config/tabs';
 import logo from '../../../../assets/logo.png';
 
-import '../../styles/header.scss';
+import './index.scss';
 
 const Header = ({ onOpen }) => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);

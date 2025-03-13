@@ -1,5 +1,5 @@
-@use '../../../styles/variables.scss' as v;
-@use '../../../styles/breakpoints.scss' as breakpoint;
+@use '../../../../styles/variables.scss' as v;
+@use '../../../../styles/breakpoints.scss' as breakpoint;
 
 .header {
   display: flex;
@@ -21,6 +21,24 @@
     @include breakpoint.for-large-up {
       display: none;
     }
+  }
+}
+
+.btn {
+  color: v.$color-dark-blue;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  width: 163px;
+
+  &:hover {
+    border: 1.5px solid v.$color-light-blue;
+    background-color: v.$color-light-blue-opacity;
+    color: v.$color-light-blue;
+  }
+
+  @include breakpoint.for-large-up {
+    width: 146px;
   }
 }
 

@@ -8,12 +8,38 @@
   padding: 0 16px;
   background-color: v.$text-color-white;
   color: v.$color-dark;
+  border-radius: 0 4px 0 0;
+  clip-path: polygon(
+    100.28% 100.88%,
+    0% 100.88%,
+    0% 95.83%,
+    0% 20.18%,
+    0% 10.8%,
+    0% 0%,
+    59.2% 0%,
+    64.31% 8.13%,
+    100% 8.04%,
+    100.28% 100.88%
+  );
 
   @include breakpoint.for-large-up {
+    border-radius: 0;
     height: 280px;
     padding: 0 80px;
     flex-direction: row;
     align-items: center;
+    clip-path: polygon(
+      100.28% 100.88%,
+      0% 100.88%,
+      0% 95.83%,
+      0% 20.18%,
+      0% 10.8%,
+      0% 0%,
+      43.2% 0%,
+      47.31% 21.13%,
+      100% 24.04%,
+      100.28% 100.88%
+    );
   }
 
   &__block {
