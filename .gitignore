@@ -1,2 +1,42 @@
+# Node.js
+node_modules/
 package-lock.json
-node_modules
+yarn.lock
+pnpm-lock.yaml
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Webpack output
+build/
+dist/
+
+# Logs
+logs/
+*.log
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Environmental variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Cache & Temp files
+.cache/
+tmp/
+out/
+
+# Jest/Cypress snapshots
+__snapshots__/
+cypress/screenshots/
+cypress/videos/

@@ -1,0 +1,94 @@
+@use '../../styles/variables.scss' as v;
+@use '../../styles/breakpoints.scss' as breakpoint;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 560px;
+  padding: 0 15px;
+  padding-bottom: 20px;
+
+  @include breakpoint.for-large-up {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 353px;
+    padding: 0;
+    margin: 28px 80px;
+    margin-bottom: 45px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 74px;
+    margin-top: 40px;
+
+    @include breakpoint.for-large-up {
+      margin-top: 0;
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    width: 107px;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: v.$text-color-white;
+    opacity: 0.4;
+
+    @include breakpoint.for-large-up {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint.for-large-up {
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    width: 165px;
+    height: 80px;
+  }
+
+  &__description {
+    margin: 0;
+    margin-top: auto;
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 0.5;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  opacity: 0.67;
+
+  @include breakpoint.for-large-up {
+    align-items: center;
+    margin-top: auto;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  &__item {
+    color: v.$text-color-white;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &_selected {
+      opacity: 1;
+      font-weight: 700;
+    }
+  }
+}

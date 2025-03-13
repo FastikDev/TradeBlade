@@ -1,0 +1,101 @@
+@use '../../styles/variables.scss' as v;
+@use '../../styles/breakpoints.scss' as breakpoint;
+
+.start {
+  height: 803px;
+  padding: 48px 16px;
+  padding-bottom: 0;
+  background-color: v.$color-purple;
+  color: v.$text-color-white;
+
+  @include breakpoint.for-large-up {
+    padding: 56px 80px;
+    padding-bottom: 0;
+  }
+
+  &__title {
+    margin: 0;
+    width: 215px;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 36px;
+
+    @include breakpoint.for-large-up {
+      font-size: 44px;
+      line-height: 56px;
+      width: 100%;
+      min-width: 829px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 40px;
+
+    @include breakpoint.for-large-up {
+      width: 343px;
+      margin-top: 56px;
+    }
+
+    &:hover {
+      border: 1.5px solid v.$color-light-blue;
+      background-color: v.$color-light-blue-opacity;
+      color: v.$color-light-blue;
+    }
+  }
+}
+
+.start-list {
+  margin-top: 51px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include breakpoint.for-large-up {
+    margin-top: 80px;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  &__item {
+    padding-left: 33px;
+    border-left: 2px solid v.$text-color-white;
+
+    @include breakpoint.for-large-up {
+      max-width: 305px;
+      padding: 0;
+      padding-top: 39px;
+      border-left: none;
+      border-top: 2px solid v.$text-color-white;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -4%;
+
+    @include breakpoint.for-large-up {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    margin-top: 8px;
+    opacity: 0.8;
+
+    @include breakpoint.for-large-up {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}

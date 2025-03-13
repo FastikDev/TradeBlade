@@ -1,0 +1,72 @@
+@use '../../styles/breakpoints.scss' as breakpoint;
+@use '../../styles/variables.scss' as v;
+
+.trade-blade {
+  height: 1003px;
+  margin: 181px 16px 71px 16px;
+
+  @include breakpoint.for-large-up {
+    margin: 0 80px;
+    padding: 0;
+    padding-top: 60px;
+    padding-bottom: 71px;
+    height: 788px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -4%;
+
+    @include breakpoint.for-large-up {
+      width: 305px;
+      margin-right: 128px;
+      font-size: 44px;
+      line-height: 56px;
+    }
+  }
+}
+
+.trade {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @include breakpoint.for-large-up {
+    max-height: 200px;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(414px, 1fr));
+    gap: 56px 21px;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    gap: 32px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -4%;
+    font-weight: 500;
+  }
+
+  &__description {
+    margin: 0;
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.8;
+  }
+}

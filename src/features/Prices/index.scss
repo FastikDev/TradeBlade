@@ -1,0 +1,274 @@
+@use '../../styles/variables.scss' as v;
+@use '../../styles/breakpoints.scss' as breakpoint;
+
+.prices {
+  height: 1184px;
+  padding: 0 16px;
+  padding-top: 56px;
+
+  @include breakpoint.for-large-up {
+    height: 940px;
+    margin: auto;
+    padding: auto 0;
+  }
+
+  &__container {
+    @include breakpoint.for-large-up {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -4%;
+
+    @include breakpoint.for-large-up {
+      font-size: 44px;
+      line-height: 56px;
+      letter-spacing: -4%;
+    }
+  }
+
+  &__switch {
+    margin-top: 24px;
+    padding: 4px;
+    width: 100%;
+    height: 52px;
+    background-color: rgba(v.$color-purple, 0.4);
+    border-radius: 4px;
+
+    @include breakpoint.for-large-up {
+      width: 413px;
+      margin-top: 44px;
+    }
+  }
+
+  &__cards {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include breakpoint.for-large-up {
+      flex-direction: row;
+      margin-top: 44px;
+    }
+  }
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 8px;
+
+  @include breakpoint.for-large-up {
+    width: 413px;
+    padding: 24px;
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+
+    @include breakpoint.for-large-up {
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__li {
+    padding: 8px 0;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+  }
+
+  &__check {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__text {
+    line-height: 20px;
+  }
+
+  &__container {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    display: flex;
+    align-items: start;
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 500;
+    letter-spacing: -4%;
+  }
+
+  &__percent {
+    font-size: 18px;
+    line-height: 20px;
+    color: v.$color-green;
+    font-weight: 500;
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 52px;
+    padding: 8px 0;
+    line-height: 20px;
+
+    &__text {
+      font-size: 12px;
+      line-height: 16px;
+      opacity: 0.56;
+      text-transform: none;
+    }
+
+    &:hover {
+      border: 1.5px solid v.$color-light-blue;
+      background-color: v.$color-light-blue-opacity;
+      color: v.$color-light-blue;
+    }
+  }
+}
+
+.standart {
+  border: 1px solid v.$color-purple;
+}
+
+.vip {
+  background-color: v.$color-purple;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+
+  &__btn {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 44px;
+    width: 167px;
+    font-size: 18px;
+    line-height: 24px;
+    transition: left 0.3s ease;
+
+    @include breakpoint.for-large-up {
+      width: 201px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &_active {
+      left: 170px;
+
+      @include breakpoint.for-large-up {
+        left: 207px;
+      }
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 14px;
+    right: 47px;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: v.$color-light-blue;
+    opacity: 0.8;
+
+    @include breakpoint.for-large-up {
+      font-size: 24px;
+      line-height: 28px;
+      right: 49px;
+    }
+
+    &_active {
+      right: 230px;
+
+      @include breakpoint.for-large-up {
+        right: 270px;
+      }
+    }
+  }
+}
+
+.drop-down {
+  position: relative;
+  z-index: 1;
+
+  &__btn {
+    margin-top: 24px;
+    height: 36px;
+    width: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(v.$text-color-white, 0.2);
+    color: v.$text-color-white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__list {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 95%;
+    left: 0;
+    right: 0;
+    background-color: v.$color-srcoll;
+    border-radius: 0 0 4px 4px;
+    transition: max-height 0.3s ease-out;
+  }
+
+  &__item {
+    padding: 8px 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  &__btn:hover + &__list {
+    max-height: 300px;
+  }
+
+  &__icon {
+    transform: rotate(0deg);
+    transition: transform 0.4s ease;
+  }
+
+  &__icon_open {
+    transform: rotate(180deg);
+    transition: transform 0.4s ease;
+  }
+}

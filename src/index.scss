@@ -1,0 +1,27 @@
+@use './styles/breakpoints.scss' as breackpoints;
+@use './styles/variables.scss' as v;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: v.$text-color-white;
+}
+
+.page {
+  width: 100%;
+  overflow: hidden;
+  background-color: v.$color-dark;
+  min-height: 100vh;
+
+  @include breackpoints.for-large-up {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440;
+    margin: auto;
+  }
+}

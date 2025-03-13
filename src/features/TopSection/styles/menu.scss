@@ -1,0 +1,97 @@
+@use '../../../styles/variables.scss' as v;
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 16px;
+  width: 100vw;
+  height: 100vh;
+  background-color: v.$color-purple;
+
+  &__btn-close {
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: v.$text-color-white;
+
+    &::before {
+      content: 'x';
+      font-weight: 500;
+    }
+
+    &:hover {
+      border: 1px solid v.$text-color-white;
+    }
+  }
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 43px auto 0 0;
+
+  &__item {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: v.$text-color-white;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+
+    &_selected {
+      font-weight: 700;
+    }
+  }
+}
+
+.menu-auth {
+  display: flex;
+  gap: 12px;
+  margin: 0 auto;
+
+  &__btn {
+    padding: auto;
+    height: 52px;
+    width: 163px;
+    text-transform: uppercase;
+    background-color: v.$color-light-blue;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 4px v.$color-light-blue;
+  }
+}
+
+.login {
+  color: v.$color-light-blue;
+  background-color: v.$color-light-blue-opacity;
+  border: 1.5px solid v.$color-light-blue;
+  cursor: pointer;
+
+  &:hover {
+    border: none;
+    background-color: v.$color-light-blue;
+    color: v.$color-dark-blue;
+  }
+}
+
+.signUp {
+  color: v.$color-dark-blue;
+  cursor: pointer;
+
+  &:hover {
+    border: 1.5px solid v.$color-light-blue;
+    background-color: v.$color-light-blue-opacity;
+    color: v.$color-light-blue;
+  }
+}
