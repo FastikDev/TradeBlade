@@ -13,8 +13,8 @@ module.exports = (_, argv) => {
   const config = {
     entry: './src/index.jsx',
     output: {
-      path: path.resolve(__dirname, 'build'),
-      filename: '[name].[contenthash].js', // Хэшируем для кеширования
+      path: path.resolve(__dirname, 'public'),
+      filename: '[name].[contenthash].js',
       assetModuleFilename: 'assets/[name].[hash][ext]',
     },
     module: {
