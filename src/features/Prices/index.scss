@@ -273,3 +273,12 @@
     transition: transform 0.4s ease;
   }
 }
+
+.btn {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
