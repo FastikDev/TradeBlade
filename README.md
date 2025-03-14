@@ -1,6 +1,6 @@
 # Project: Trade-Blade
 
-### [Deploy](https://trade-blade-alpha.vercel.app/)
+### [Deploy](https://67d38a52edaaf8000818938d--trade-blade-viktor.netlify.app/)
 
 Responsiveness
 The website is fully responsive and optimized for various devices.
