@@ -55,7 +55,7 @@ module.exports = (_, argv) => {
         template: './src/index.html',
       }),
       new FaviconsWebpackPlugin({
-        logo: path.resolve(__dirname, 'src/assets/favicon.png'),
+        logo: path.resolve(__dirname, './src/assets/icons/favicon.ico'),
         cache: true,
         outputPath: 'assets/icons',
       }),
