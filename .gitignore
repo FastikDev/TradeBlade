@@ -10,7 +10,6 @@ yarn-error.log*
 # Webpack output
 build/
 dist/
-public/
 
 # Logs
 logs/
