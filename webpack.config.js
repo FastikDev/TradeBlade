@@ -13,7 +13,7 @@ module.exports = (_, argv) => {
   const config = {
     entry: './src/index.jsx',
     output: {
-      path: path.resolve(__dirname, 'public'),
+      path: path.resolve(__dirname, 'dist'),
       filename: '[name].[contenthash].js',
       assetModuleFilename: 'assets/[name].[hash][ext]',
     },
@@ -53,11 +53,6 @@ module.exports = (_, argv) => {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html',
-      }),
-      new FaviconsWebpackPlugin({
-        logo: path.resolve(__dirname, './src/assets/icons/favicon.ico'),
-        cache: true,
-        outputPath: 'assets/icons',
       }),
     ],
     devServer: {
